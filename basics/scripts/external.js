@@ -1,0 +1,1 @@
+document.write("This message is from the external Script file.<br/>")
