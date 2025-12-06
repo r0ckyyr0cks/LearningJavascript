@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Concatenation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Concatenation in JavaScript</h1>
+    <script>
+        var a = "10";
+        var b = "20";
+        var result = a + b;
+        document.write("The concatenation of a and b is: " + result);
+        document.write("<br>");
+        document.write("Type of result: " + typeof result);
+        document.write("<br>");
+        //string type conversion
+        document.write("Addition of a and b is: " + (Number(a) + Number(b)));
+        document.write("<br>" + "^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ " + "<br>");
+        document.write("Addition of a and b is: " + (a + b));
+        document.write("<br>");
+        document.write("Type after conversion: " + typeof (Number(a) + Number(b)));
+        document.write("<br>");
+        document.write("Using template literals: ");
+        document.write(`${a} concatenated with ${b} is ${result}`);
+        document.write("<br>");
+        document.write("Type using template literals: " + typeof `${a} concatenated with ${b} is ${result}`);
+    </script>
+
+</html>
