@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Sum of 2 numbers in Popup</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Sum of 2 numbers in Popups using JavaScript</h1>
+    <script>
+        // Display an alert popup
+        alert("This will calculate the sum of 2 numbers!");
+
+        // Display a confirm popup
+        var num1 = parseFloat(prompt("Enter the first number: "));
+        var num2 = parseFloat(prompt("Enter the second number: "));
+        var sum = num1 + num2;
+        var userConfirmed = confirm(`The sum of ${num1} and ${num2} is ${sum}.`);
+        if (userConfirmed) {
+            alert("You chose to proceed!");
+        } else {
+            alert("Oops!You chose to cancel!");
+        }
+        document.write(`<h2>The sum of ${num1} and ${num2} is ${sum}.</h2>`);
+    </script>
+
+</html>

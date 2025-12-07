@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Prompt Popups</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Prompt Popups in JavaScript</h1>
+    <script>
+        // Display an alert popup
+        alert("This is an alert popup! \n Please click OK to continue.");
+
+        // Display a confirm popup
+        var userResponse = prompt("Enter your name: ");
+        if (userResponse) {
+            alert(`Hello, ${userResponse}! \n How are you doing today?`);
+        } else {
+            alert("Oops! You chose to cancel!");
+        }
+    </script>
+
+</html>
