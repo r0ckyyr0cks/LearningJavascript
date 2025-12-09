@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>If Else Ladder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>If-Else Ladder in JavaScript</h1>
+    <script>
+        var javascript = parseInt(prompt("Enter the JS Marks: "));
+        var java = parseInt(prompt("Enter the Java Marks: "));
+        var dotnet = parseInt(prompt("Enter the .Net Marks: "));
+
+        var total = javascript + java + dotnet;
+        document.write("Total Marks: " + total + "<br/>");
+
+        var average = total / 3;
+        document.write("Average Marks: " + average + "<br/>");
+
+        if (javascript >= 35 && java >= 35 && dotnet >= 35) {
+            document.write("Pass <br/>");
+        } else {
+            document.write("Result: Fail <br/>");
+        }
+        
+    </script>
+
+</html>
