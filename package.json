@@ -1,0 +1,22 @@
+{
+  "name": "learningjavascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r0ckyyr0cks/LearningJavascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r0ckyyr0cks/LearningJavascript/issues"
+  },
+  "homepage": "https://github.com/r0ckyyr0cks/LearningJavascript#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.2"
+  }
+}
