@@ -11,6 +11,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 /**
  * @see https://playwright.dev/docs/test-configuration
+ * @type {import('@playwright/test').PlaywrightTestConfig}
  */
 export default defineConfig({
   testDir: './tests',
@@ -19,6 +20,13 @@ export default defineConfig({
   /* Ignore files in the test directory */
   // testIgnore: ['**/testignore.spec.js'],
   /* Run tests in files in parallel */
+  timeout: 30 * 1000,
+  expect: {
+    /** Maximum time expect() should wait for the condition to be met. 
+     * For example in `await expect(locator).toHaveText();`
+    */
+    timeout: 5000,
+  },
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
@@ -28,7 +36,12 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   // @ts-ignore
-  reporter: ['html', 'list'],
+  // CORRECT
+  reporter: [
+    ['list'],                                    // Simple string inside a tuple
+    ['html', { outputFolder: 'my-report' }],    // Tuple with options
+    ['json', { outputFile: 'results.json' }]    // Tuple with options
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
